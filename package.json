@@ -1,7 +1,7 @@
 {
-  "name": "swc-sandbox",
+  "name": "swc-react-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template for a React App powered by SWC (speedy web compiler).",
   "main": "index.js",
   "dependencies": {
     "react": "^16.8.1",
@@ -19,6 +19,6 @@
     "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Luke Geneva",
+  "license": "MIT"
 }
