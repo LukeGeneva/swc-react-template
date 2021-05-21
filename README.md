@@ -10,33 +10,33 @@ Please refer to the [installation](https://swc-project.github.io/docs/installati
 
 Start by cloning this repository.
 
-```
+```bash
 git clone https://github.com/LukeGeneva/swc-react-template.git <your-project-path>
 cd <your-project-path>
 ```
 
 Remove the `.git` directory and then initialize your own.
 
-```
+```bash
 rm -rf .git
 git init
 ```
 
 You can alter the `package.json` file to suit your needs. This may be as simple as running:
 
-```
+```bash
 npm init
 ```
 
 Install packages
 
-```
+```bash
 npm install
 ```
 
 The template uses [webpack](https://webpack.js.org/) and comes packaged with `webpack-dev-server`. You can start the dev server by running:
 
-```
+```bash
 npm start
 ```
 
