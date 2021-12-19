@@ -1,28 +1,37 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+  mode: "development",
+  entry: "./src/index.js",
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           // `.swcrc` can be used to configure swc
-          loader: 'swc-loader'
-        }
-      }
-    ]
+          loader: "swc-loader",
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(jpe?g|gif|png|svg)/,
+        type: "asset/resource",
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.join(__dirname, 'public/index.html')
-    })
+      template: path.join(__dirname, "public/index.html"),
+    }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist')
-  }
+    //contentBase: path.join(__dirname, "dist"),
+    port: 3000,
+    liveReload: true,
+  },
 };
