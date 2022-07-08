@@ -9,7 +9,7 @@
 .check-img {
   width: 100%;
   height: 100vh;
-  background-image: url("../components/sample.jpg");
+  background-image: url('../components/sample.jpg');
   background-position: center;
   background-size: cover;
 }
